@@ -1,0 +1,13 @@
+#!url=https://raw.githubusercontent.com/n4hzxje/Locket/refs/heads/main/Locket_Gold_Shadowrocket_Wozyyy.js
+#!name=Locket_Gold_Wozyyy
+#!desc=Locket_Gold_Shadowrocket
+
+[Script]
+# ~ By N4hzxje
+# ～ Egern transfer to Shadowrocket & Surge & LanceX
+revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/n4hzxje/Locket/refs/heads/main/Locket_Gold_Shadowrocket_Wozyyy.js, requires-body=true, max-size=-1, timeout=60
+
+deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/n4hzxje/Locket/main/deleteHeader.js, timeout=60
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com
